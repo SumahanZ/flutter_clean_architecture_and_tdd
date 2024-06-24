@@ -1,0 +1,8 @@
+When Building TDD
+1. Start with the domain layer because it doesnt depend on any other layer.
+2. For example to have repository implementation on data, you need the contract from the domain repository first
+3. To build the presentation, you need the UseCase from domain layer to do certain functions/events
+4. Build the presentation last
+5. The domain even though it doesnt depend on the data, it will still depend on the data how?
+6. Answer: When using usecase it needs a dependency of AuthRepository, since we cant use AuthRepository from the abstract class in the domain since its just a contract, we have to pass in the implementation using Dependency Injection from the data layer (loosely coupled), however the dependency specified in the use case takes in the contract, so the domain layer depend on the data layer, without directly depending on it (abstraction of dependency)
+7. If i delete the data layer, there will be no error on the domain layer

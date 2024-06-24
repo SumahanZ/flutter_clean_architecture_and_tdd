@@ -1,9 +1,8 @@
 import 'package:flutter_clean_architecture_and_tdd/core/errors/failure.dart';
-import 'package:flutter_clean_architecture_and_tdd/core/usecase/use_case.dart';
 import 'package:flutter_clean_architecture_and_tdd/features/authentication/domain/entities/user.dart';
 import 'package:flutter_clean_architecture_and_tdd/features/authentication/domain/repositories/authentication_repository.dart';
 import 'authentication_repository.mock.dart';
-import 'package:flutter_clean_architecture_and_tdd/features/authentication/usecases/get_users.dart';
+import 'package:flutter_clean_architecture_and_tdd/features/authentication/domain/usecases/get_users.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:mocktail/mocktail.dart';
@@ -25,7 +24,7 @@ void main() {
           .thenAnswer((_) async => Right(testResponse));
 
       //Act
-      final result = await usecase(NoParam());
+      final result = await usecase();
 
       //Assert
       expect(result, isA<Right<Failure, List<User>>>());

@@ -12,7 +12,8 @@ class UserModel extends User {
   });
 
   factory UserModel.empty() {
-    return const UserModel(id: "", createdAt: "", name: "", avatar: "");
+    return const UserModel(
+        id: "test", createdAt: "test", name: "test", avatar: "test");
   }
 
   Map<String, dynamic> toMap() {

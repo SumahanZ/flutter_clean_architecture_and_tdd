@@ -3,4 +3,7 @@ abstract class UseCase<Result, Params> {
   Result call(Params params);
 }
 
-class NoParam {}
+abstract class UseCaseNoParam<Result> {
+  const UseCaseNoParam();
+  Result call();
+}

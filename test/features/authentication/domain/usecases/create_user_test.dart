@@ -1,6 +1,6 @@
 import 'package:flutter_clean_architecture_and_tdd/features/authentication/domain/repositories/authentication_repository.dart';
 import 'authentication_repository.mock.dart';
-import 'package:flutter_clean_architecture_and_tdd/features/authentication/usecases/create_user.dart';
+import 'package:flutter_clean_architecture_and_tdd/features/authentication/domain/usecases/create_user.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:mocktail/mocktail.dart';
